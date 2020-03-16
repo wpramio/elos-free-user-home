@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,700,900" media="screen" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700,900" media="screen" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Navbar</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar-content">
+                <a class="navbar-brand" href="#">
+                    <img src="https://elos.vc/assets/logos/logo-0cc7a76363ec5fc78daa9e8a8287886c8466aba961828f6c59435b698e240adb.png" alt="Elos logo">
+                </a>
+                <div class="toggler-wrapper hide-unless-mobile" id="navbar-toggler">
+                    <div class="hamburguer-icon" id="hamburguer-icon">
+                        <span class="line" id="line-top"></span>
+                        <span class="line" id="line-middle"></span>
+                        <span class="line" id="line-bottom"></span>
+                    </div>
+                </div>
+                <div class="collapse navbar-list-wrapper" id="navbar-list-wrapper">
+                    <ul>
+                        <li class="navbar-item">
+                            <a href="#">
+                                <i class="material-icons navbar-icon">play_arrow</i>
+                                <span class="navbar-item-text">Conferência</span>
+                            </a>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="#">
+                                <i class="material-icons navbar-icon">settings</i>
+                                <span class="navbar-item-text">Configurações</span>
+                            </a>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="#">
+                                <i class="material-icons navbar-icon">email</i>
+                                <span class="navbar-item-text">Convite</span>
+                            </a>
+                        </li>
+                        <li class="navbar-item">
+                            <a href="#">
+                                <i class="material-icons navbar-icon subscribe-icon">star</i>
+                                <span class="navbar-item-text">Assine o Elos</span>
+                            </a>
+                        </li>
+                        <li class="separator navbar-item hide-unless-mobile">
+                            <hr>
+                        </li>
+                        <li class="navbar-item hide-unless-mobile">
+                            <a href="#">
+                                <i class="material-icons navbar-icon">info</i>
+                                <span class="navbar-item-text">Blog</span>
+                            </a>
+                        </li>
+                        <li class="navbar-item hide-unless-mobile">
+                            <a href="#">
+                                <i class="material-icons navbar-icon">help</i>
+                                <span class="navbar-item-text">Ajuda</span>
+                            </a>
+                        </li>
+                        <li class="navbar-item hide-unless-mobile">
+                            <a href="#">
+                                <i class="material-icons navbar-icon">language</i>
+                                <span class="navbar-item-text">Português</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <div id="free-user-home">
+            <h1 class="free-user-title">Assine o Elos e tenha mais vantagens</h1>
+            <div class="cards">
+                <div class="promo-card">
+                    <div class="container-fluid">
+                        <div id="room-users-logo">
+                            <img src="room-users-logo.png" alt="">
+                        </div>
+                        <h3 class="card-title">Mais gravações e usuários</h3>
+                        <span class="card-text">
+                            Colabore com até 100 usuários simultâneos na sua sala, com gravações ilimitadas.
+                        </span>
+                    </div>
+                </div>
+                <div class="promo-card">
+                    <div class="container-fluid">
+                        <div id="integration-logo">
+                            <img src="integration-logo.png" alt="">
+                        </div>
+                        <h3 class="card-title">Integração</h3>
+                        <span class="card-text">
+                            Conecte o Elos ao seu Ambiente Virtual de Aprendizagem, como Moodle, Canvas e Wordpress.
+                        </span>
+                    </div>
+                </div>
+                <div class="promo-card">
+                    <div class="container-fluid">
+                        <div id="personalization-logo">
+                            <img src="personalization-logo.png" alt="">
+                        </div>
+                        <h3 class="card-title">Personalização</h3>
+                        <span class="card-text">
+                            Personalize sua sala com a identidade visual da sua empresa.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="plans-button">
+                <a href="#" class="btn btn-primary">Conheça nossos planos</a>
+            </div>
+        </div>
+
+
+        </div>
+    </div>
+    <footer class="hide-on-mobile">
+        <div class="footer-content">
+            <div class="footer-links">
+                <ul>
+                    <li>
+                        <a href="#" id="blog-link">
+                            <i class="material-icons" id="blog-icon">info</i>
+                            Blog
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">Perguntas frequentes</a>
+                    </li>
+                    <li>
+                        <a href="#">Contato</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-languages">
+                <i class="material-icons" id="footer-language-icon">language</i>
+                <span class="footer-language-text" id="portuguese">Português</span>
+                <i class="material-icons language-arrow-icon">keyboard_arrow_down</i>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $('#navbar-toggler').click(function(){
+            $('#hamburguer-icon').toggleClass("close")
+            $('#navbar-list-wrapper').toggleClass("expand")
+        })
+    </script>
+</body>
+</html>

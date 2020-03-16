@@ -1,0 +1,334 @@
+/* css reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* css reset */
+
+
+/* jquery styles */
+.collapse {
+	display: none;
+}
+.expand {
+	display: initial;
+	/* transition: all .8s ease-in-out; */
+}
+
+
+/* general styles */
+body {
+	display: flex;
+	position: relative;
+	min-height: 100vh;
+	height: 100%;
+	width: 100%;
+	flex-flow: column wrap;
+	justify-content: space-between;
+
+	box-sizing: border-box;
+	font-size: 16.5px;
+	font-family: "IBM Plex Sans",sans-serif;
+	
+	background-color: #f2f2f2;
+}
+
+/* navbar */
+nav {
+	width: 100%;
+	width: 100vw;
+	background-color: #fff;
+	box-shadow: 0 0 12px 0 rgba(43,45,66,0.15);
+}
+.navbar-content {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 65px;
+	background-color: #fff;
+}
+.navbar-brand {
+	height: 43px;
+	margin-top: 11px;
+	margin-left: 12.5px;
+}
+.navbar-brand img {
+	height: 100%;
+}
+
+/* navbar list */
+.navbar-list-wrapper {
+	flex-basis: 100%;
+	padding: 10px 15px;
+}
+.navbar-item {
+	margin-bottom: 15px;
+}
+.navbar-item a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	color: #5d4da3;
+}
+.navbar-icon {
+	margin-right: 10px;
+}
+.subscribe-icon {
+	color: #2dccd3;
+}
+
+/* hamburguer */
+.toggler-wrapper {
+	width: 30px;
+	height: 30px;
+	margin-right: 35px;
+}
+
+.hamburguer-icon {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.hamburguer-icon .line {
+	opacity: 0.8;
+	position: absolute;
+	border-radius: 2px;
+	background-color: #2dccd3;
+	width: 100%;
+	height: 4px;
+}
+#line-top {
+	top: 18%;
+}
+#line-middle {
+	top: 48%;
+}
+#line-bottom {
+	top: 78%;
+}
+.hamburguer-icon .line .close #line-top {
+	transform: rotate(-45deg);
+}
+
+
+/* content */
+.content {
+	margin-top: 70px;
+	margin-bottom: 70px;
+	align-self: center;
+	flex: 1;
+}
+
+/* home specific content */
+#free-user-home {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+.free-user-title {
+	font-size: 34px;
+	font-family: "Comfortaa",sans-serif;
+	font-weight: bold;
+	line-height: 1.4;
+	text-align: center;
+	color: #2dccd3;
+}
+.card-title {
+	font-weight: bold;
+}
+.plans-button {
+	display: inline-block;
+	height: 100%;
+	margin-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.btn, .btn-primary {
+	background-color: #5d4da3;
+	text-decoration: none;
+	color: white;
+	margin-top: 50px;
+	width: 100%;
+	padding: 14px 37px;
+}
+
+@media (max-width: 649px) {
+	.hide-on-mobile {
+		display: none;
+	}
+}
+
+/* medium and large screens */
+@media (min-width: 650px) {
+
+	.hide-unless-mobile {
+		display: none;
+	}
+
+	nav {
+		display: flex;
+		justify-content: center;
+	}
+	.navbar-content {
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+		flex: 1;
+		min-height: 65px;
+		max-width: 1366px;
+	}
+	.navbar-brand {
+		margin: 0 0 0 15px;
+	}
+
+	.navbar-list-wrapper {
+		display: initial;
+		flex-basis: auto;
+		padding: 0;
+		margin: 10px 15px;
+	}
+	.navbar-list-wrapper ul {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+	}
+	.navbar-item {
+		margin-bottom: 0;
+	}
+	.navbar-item-text {
+		display: none;
+	}
+	.navbar-icon {
+		transition: color, background-color .3s ease-in-out;
+		font-size: 26px;
+		background-color: #5d4da3;
+		color: white;
+		border-radius: 19.5px;
+		padding: 6.5px;
+		margin: 0 15px;
+	}
+	.navbar-icon:hover {
+		background-color:white;
+		color: #5d4da3;
+		transition: color, background-color .3s ease-in-out;
+	}
+	.subscribe-icon {
+		background-color: #2dccd3;
+	}
+	.subscribe-icon:hover {
+		color: #2dccd3;
+		background-color: white;
+	}
+
+	/* content */
+	.content {
+		margin-top: 70px;
+		margin-bottom: 0;
+	}
+
+	/* footer */
+	footer {
+		display: flex;
+		justify-content: center;
+		height: 52px;
+		width: 100%;
+		background-color: white;
+		box-shadow: 0 0 12px 0 rgba(43,45,66,0.15);
+
+	}
+	.footer-content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-grow: 1;
+		height: 100%;
+		max-width: 1366px;
+
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: bold;
+		color: #444;
+	}
+	.footer-links ul {
+		display: flex;
+		align-items: center;
+	}
+	.footer-links ul li {
+		margin: 0 12px;
+	}
+	.footer-links ul li a {
+		color: #444;
+		font-weight: bold;
+	}
+	#blog-link {
+		display: flex;
+		align-items: center;
+	}
+	#blog-icon {
+		margin-right: 5px;
+		font-size: 33px;
+		color: #2dccd3;
+	}
+	.footer-languages {
+		display: flex;
+		align-items: center;
+	}
+	.footer-language-text {
+		margin: 0 10px;
+	}
+	.language-arrow-icon {
+		font-size: 33px;
+	}
+
+	/* home specific content */
+}
